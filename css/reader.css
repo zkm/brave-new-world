@@ -9,7 +9,8 @@
   --text: #24211d;
   --muted: #6e675d;
   --accent: #1f6f78;
-  --accent-soft: #e3eeee;
+  --accent-soft: #e1eeef;
+  --accent-hover: #16525a;
   --shadow: rgba(30, 20, 10, .18);
 
   /* Reading size; js/prefs.js overrides this. */
@@ -28,8 +29,9 @@
     --line: #2e2b26;
     --text: #e2ddd3;
     --muted: #9a9386;
-    --accent: #6cc4cc;
-    --accent-soft: #1d3234;
+    --accent: #6fb8c0;
+    --accent-soft: #1b3235;
+    --accent-hover: #5aa3ab;
     --shadow: rgba(0, 0, 0, .5);
   }
 }
@@ -40,8 +42,9 @@
   --line: #2e2b26;
   --text: #e2ddd3;
   --muted: #9a9386;
-  --accent: #6cc4cc;
-  --accent-soft: #1d3234;
+  --accent: #6fb8c0;
+  --accent-soft: #1b3235;
+  --accent-hover: #5aa3ab;
   --shadow: rgba(0, 0, 0, .5);
 }
 
@@ -52,7 +55,8 @@
   --text: #3b2f22;
   --muted: #7a6750;
   --accent: #1f6f78;
-  --accent-soft: #dfe0cc;
+  --accent-soft: #dbe0cc;
+  --accent-hover: #16525a;
   --shadow: rgba(60, 40, 10, .2);
 }
 
@@ -261,6 +265,10 @@ body.toc-open .drawer {
   color: var(--panel);
 }
 
+.toc .chapters a[aria-current="true"]:hover {
+  background: var(--accent-hover);
+}
+
 
 /* ==========================================================================
    Cover page
@@ -344,9 +352,12 @@ body.toc-open .drawer {
   font-weight: 500;
 }
 
-.primary:hover,
+.primary:hover {
+  background: var(--accent-hover);
+}
+
 .secondary:hover {
-  filter: brightness(1.05);
+  border-color: var(--accent-hover);
 }
 
 .parts {
@@ -366,7 +377,7 @@ body.toc-open .drawer {
 }
 
 .parts a:hover {
-  border-color: var(--accent);
+  border-color: var(--accent-hover);
 }
 
 .parts b {
@@ -470,7 +481,7 @@ body.toc-open .drawer {
 }
 
 .nav a:hover {
-  border-color: var(--accent);
+  border-color: var(--accent-hover);
 }
 
 .nav small {
